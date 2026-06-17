@@ -44,5 +44,25 @@ print(f'person={person3}')
 stocks = {
   'AAPL':121,
   'AMZN':3380,
-
+  'MSFT':219,
+  'BIIB':169,
+  'LVGO':144,
 }
+print(f'stocks = {stocks}')
+new_stocks = {}
+for key,value in stocks.items():
+  new_stocks[key]= value*1.02
+
+print(f'new stocks = {new_stocks}')
+
+#Dictionarie Comprehension
+stocks2 = {
+  'AAPL':121,
+  'AMZN':3380,
+  'MSFT':219,
+  'BIIB':169,
+  'LVGO':144,
+}
+print(f'stocks = {stocks2}')
+new_stocks2 = { key:value*1.02 for key, value in stocks2.items()}
+print(f'new stocks = {new_stocks2}')

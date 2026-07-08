@@ -5,7 +5,7 @@ screen.bgcolor("#ffafcc")
 screen.title("Color")
 #2. Create turtle 
 t= turtle.Turtle()
-t.color("#a2d2ff","#cdb4db")
+t.color("#091521","#D43865")
 
 #3.Drawt
 t.begin_fill()

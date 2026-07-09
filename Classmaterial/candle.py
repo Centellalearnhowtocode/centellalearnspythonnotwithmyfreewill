@@ -4,6 +4,7 @@ screen = turtle.Screen()
 screen.title("Candle Drawing")
 t = turtle.Turtle()
 t.speed(3)
+screen.bgcolor("#bde0fe")
 
 #Draw pink candle body
 t.color("pink")

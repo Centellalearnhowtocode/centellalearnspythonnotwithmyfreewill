@@ -2,23 +2,25 @@
 import turtle 
 screen = turtle.Screen()
 screen.title("Hexagon")
-
-#Create turtle name "t"
-t = turtle.Turtle("turtle")
-t.pensize(5)
+t = turtle.Turtle()
 t.speed(3)
+screen.bgcolor("#bde0fe")
+
+t.pensize(5)
 
 #define the color for hexagon
-colors = ["red","green","blue","yellow","orange","purple"]
+color = ["#ffc8dd","#880d1e","#18380d","blue","yellow","#e500a4"]
 
 #draw the hexagone with different colors
-for color in colors:
-  t.color(colors)
+for color in color:
+  t.begin_fill()
+  t.color(color,color)
   t.forward(100)
   t.left(60)
+  t.end_fill()
 
 
-#Keep window oep
+#Keep window open until user clicks on it
+t.hideturtle()
 screen.exitonclick()
-
 

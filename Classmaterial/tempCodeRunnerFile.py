@@ -1,7 +1,1 @@
-t.penup()
-t.goto(0,-100)
-t.pendown()
-t.color("green")
-t.begin_fill()
-t.circle(25)
-t.end_fill()
+screen.exitonclick()

@@ -3,18 +3,17 @@ import turtle
 screen = turtle.Screen()
 screen.title("Hexagon")
 t = turtle.Turtle()
-t.speed(3)
+t.speed(5)
 screen.bgcolor("#bde0fe")
 
-t.pensize(5)
+t.pensize(10)
 
 #define the color for hexagon
-color = ["#ffc8dd","#880d1e","#18380d","blue","yellow","#e500a4"]
+color = ["#ffc8dd","#880d1e","#18380d","#e500a4","purple","orange"]
 
 #draw the hexagone with different colors
 for color in color:
-  t.begin_fill()
-  t.color(color,color)
+  t.color(color)
   t.forward(100)
   t.left(60)
   t.end_fill()

@@ -25,7 +25,7 @@ t.end_fill()
 
 #draw red light
 t.penup()
-t.goto(0,0)
+t.goto(0,100)
 t.pendown()
 t.color("red")
 t.begin_fill()

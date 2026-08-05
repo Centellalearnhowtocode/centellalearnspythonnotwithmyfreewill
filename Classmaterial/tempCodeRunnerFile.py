@@ -1,2 +1,1 @@
- t.fillcolor("pink")
-  t.begin_fill()
+87

@@ -1,0 +1,8 @@
+def diamond_square_pattern(side_lenght,number_of_square):
+   for i in range(number_of_square):
+      t.color(color)
+      diamond_square(side_lenght)
+      t.penup()
+      t.forward(side_lenght)
+      t.forward(side_lenght*1.5)
+      t.pendown()

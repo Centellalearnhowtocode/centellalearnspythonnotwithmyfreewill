@@ -1,1 +1,2 @@
-87
+screen.exitonclick()
+turtle.done

@@ -40,6 +40,8 @@ t.setheading(270)
 t.pendown()
 t.forward(130)
 
+
+
 t.penup()
 t.goto(-75, -200)
 t.color("black")

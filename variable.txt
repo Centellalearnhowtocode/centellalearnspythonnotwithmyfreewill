@@ -1,4 +1,0 @@
-#ffafcc pink
-#606c38 soldier green
-#780000 deep red
-#cdb4db lightpurple

@@ -1,6 +1,0 @@
-t.color("yellow")
-t.begin_fill()
-t.penup()
-t.goto(0,50)
-t.pendown()
-t.circle(25)

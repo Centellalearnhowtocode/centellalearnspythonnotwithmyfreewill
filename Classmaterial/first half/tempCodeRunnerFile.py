@@ -1,2 +1,0 @@
-screen.exitonclick()
-turtle.done

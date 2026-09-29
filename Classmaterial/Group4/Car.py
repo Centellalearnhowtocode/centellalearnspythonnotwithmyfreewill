@@ -1,51 +1,115 @@
 import turtle
 
-screen = turtle.Screen()
-screen.title("Car Assignment")
-screen.bgcolor("#ffafcc")
+# screen
+screen=turtle.Screen()
+screen.setup (width = 600 ,height =500 )
+screen.title("Group 4 - Car Proportional Refinement")
 
-t = turtle.Turtle()
+# turtle
+t=turtle.Turtle()
+t.speed(3)
 t.pensize(3)
-t.speed(0)
+t.pencolor("#002fa7")  # Classic blue outline
 
-t.color("#606c38")
-wheel_positions = [0, -200]
-circle_sizes = [(-30, 50), (-20, 40)]
-
-for x in wheel_positions:
-    for y_offset, radius in circle_sizes:
-        t.penup()
-        t.goto(x, y_offset)
-        t.pendown()
-        t.circle(radius)
-
-t.color("black")
-body_lines = [
-    (-150, 20, 0, 100),
-    (-225, 100, 0, 275),
-    (-150, 150, 0, 100),
-]
-
-for x, y, heading, length in body_lines:
+def draw_wheel(x, y):
+    
     t.penup()
-    t.goto(x, y)
-    t.setheading(heading)
+    t.goto(x, y - 28)
+    t.setheading(0)
     t.pendown()
-    t.forward(length)
+    
+    t.fillcolor( "#888888")  # Grey fill
+    t.begin_fill()
+    t.circle( 28 )
+    t.end_fill()
+    
+    #  rim 
+    t.penup()
+    t.goto(x,y - 18)
+    t.pendown()
+    t.fillcolor("white")
+    t.begin_fill()
+    t.circle(18 )
+    t.end_fill( )
 
-t.color("#780000")
+# Draw Main
 t.penup()
-t.goto(-75, 150)
-t.setheading(270)
+t.goto(-145,  -20)  # front-bottom
 t.pendown()
-t.forward(130)
 
+# Front bumper 
+t.goto(-150, -10)
+t.goto(-150,  15)
+t.goto(-140,32)  #  nose
 
+t.goto( -70, 44)   
 
+# Windshield
+t.goto( -20, 95)
+
+# Roof line
+t.goto(65, 95)
+
+# Rear window slope
+t.goto(115, 44)
+
+# Trunk line 
+t.goto(162, 41)
+
+# Rounded rear bumper
+t.goto(168, 25)
+t.goto(168, -5)
+t.goto(158, -20)
+
+# Bottom chassis
+t.goto(-145, -20)
+
+# - 2. Draw windows & center Pillar
 t.penup()
-t.goto(-75, -200)
-t.color("black")
-t.write("Let us pass, please. TT", font=("Arial", 12, "italic"))
-t.hideturtle()
+t.goto(-70, 44)
+t.pendown()
+t.goto(115, 44)
 
-turtle.done()
+# Main center vertical pillar
+t.penup()
+t.goto(15, 95)
+t.pendown()
+t.goto(15, -20)
+
+# --- 3. Draw Details (Handle & Lights) ---
+# Minimalist door handle
+t.penup()
+t.goto(-5, 34)
+t.pendown()
+t.goto(5, 34)
+
+# Centered Yellow Headlight Outline
+t.penup()
+t.goto(-150, 10)
+t.pendown()
+t.pencolor("#d4af37")
+t.goto(-146, 25)
+t.goto(-137, 23)
+t.goto(-141, 10)
+t.goto(-150, 10)
+
+# Unfilled Red Taillight Outline
+t.penup()
+t.goto(168, 23)
+t.pendown()
+t.pencolor("red")
+t.goto(156, 23)
+t.goto(156, 5)
+t.goto(168, 5)
+t.goto(168, 23)
+
+# Reset pen color for wheels
+t.pencolor("#002fa7")
+
+# --- 4. Draw Wheels ---
+draw_wheel(-85, -20)
+draw_wheel(95, -20)
+
+# Hide turtle and lock screen
+t.hideturtle()
+screen.mainloop()
